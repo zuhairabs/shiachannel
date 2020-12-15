@@ -81,35 +81,35 @@ URL:            http://themeforest.net/user/wpoceans
 
 @font-face {
     font-family: 'Conv_Now-Bold';
-    src: url('../fonts/text-fonts/Now-Bold.ttf');
+    src: url('../fonts/text-fonts/now.bold.ttf');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Now';
-    src: url(../fonts/text-fonts/now-regular.otf) format("truetype");
+    src: url('../fonts/text-fonts/now.regular.ttf') format("truetype");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Now';
-    src: url(../fonts/text-fonts/now-medium.otf) format("truetype");
+    src: url('../fonts/text-fonts/now.medium.ttf') format("truetype");
     font-weight: 600;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Now';
-    src: url(../fonts/text-fonts/now-light.otf) format("truetype");
+    src: url('../fonts/text-fonts/now.light.ttf') format("truetype");
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Now';
-    src: url(../fonts/text-fonts/now-thin.otf) format("truetype");
+    src: url('../fonts/text-fonts/now-thin.ttf') format("truetype");
     font-weight: 200;
     font-style: normal;
 }
@@ -4476,7 +4476,7 @@ img {
     position: absolute;
     top: -8px;
     left: 0;
-    background: url(../images/event/img-1.png) no-repeat center center / cover;
+    background: url(../images/event/img-1.jpg) no-repeat center center / cover;
     width: 60px;
     height: 85px;
     text-align: center;
@@ -4485,7 +4485,7 @@ img {
 }
 
 .wpo-event-img .thumb-text-2 {
-    background: url(../images/event/img-2.png) no-repeat center center / cover;
+    background: url(../images/event/img-2.jpg) no-repeat center center / cover;
 }
 
 
