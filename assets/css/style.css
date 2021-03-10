@@ -2964,7 +2964,7 @@ img {
     height: 565px;
 }
 
-.hero-style-2 img,
+.hero-style-2 .shrine,
 .hero-style-3 img,
 .hero-style-4 img {
     animation: bounce 3s linear infinite;
@@ -4476,7 +4476,7 @@ img {
     position: absolute;
     top: -8px;
     left: 0;
-    background: url(../images/event/img-1.jpg) no-repeat center center / cover;
+    background: url(../images/event/img-1.png) no-repeat center center / cover;
     width: 60px;
     height: 85px;
     text-align: center;
@@ -4485,7 +4485,7 @@ img {
 }
 
 .wpo-event-img .thumb-text-2 {
-    background: url(../images/event/img-2.jpg) no-repeat center center / cover;
+    background: url(../images/event/img-2.png) no-repeat center center / cover;
 }
 
 
@@ -4498,7 +4498,7 @@ img {
 .wpo-event-img .thumb-text span:first-child,
 .wpo-event-img .thumb-text-2 span:first-child,
 .wpo-event-img .thumb-text-3 span:first-child {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 600;
     color: #fff;
 }
@@ -4911,6 +4911,14 @@ img {
 }
 
 .hero-style-1 .slide-caption .btns .theme-btn {
+    -webkit-box-shadow: 0 0 0 5px rgba(0, 167, 213, .5);
+    box-shadow: 0 0 0 5px rgba(0, 167, 213, .5);
+}
+
+.wpo-newsletter-form .btns .theme-btn {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
     -webkit-box-shadow: 0 0 0 5px rgba(0, 167, 213, .5);
     box-shadow: 0 0 0 5px rgba(0, 167, 213, .5);
 }
@@ -5791,11 +5799,11 @@ breadcumb-style
 }
 
 .contact-map {
-    -webkit-filter: grayscale(100%);
-    -moz-filter: grayscale(100%);
-    -ms-filter: grayscale(100%);
-    -o-filter: grayscale(100%);
-    filter: grayscale(100%);
+    -webkit-filter: grayscale(30%);
+    -moz-filter: grayscale(30%);
+    -ms-filter: grayscale(30%);
+    -o-filter: grayscale(30%);
+    filter: grayscale(30%);
 }
 
 

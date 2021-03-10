@@ -1,4 +1,4 @@
-(function($) {
+(function ($) {
 
     "use strict";
 
@@ -15,7 +15,7 @@
         var closeBtn = $(".navigation-holder .close-navbar");
         var body = $(".page-wrapper");
 
-        openBtn.on("click", function() {
+        openBtn.on("click", function () {
             if (!navbar.hasClass("slideInn")) {
                 navbar.addClass("slideInn");
                 body.addClass("body-overlay");
@@ -23,7 +23,7 @@
             return false;
         })
 
-        closeBtn.on("click", function() {
+        closeBtn.on("click", function () {
             if (navbar.hasClass("slideInn")) {
                 navbar.removeClass("slideInn");
             }
@@ -62,7 +62,7 @@
         if (windowWidth <= 991) {
             subMenu.hide();
             megamenu.hide();
-            menuItemWidthSubMenu.on("click", function(e) {
+            menuItemWidthSubMenu.on("click", function (e) {
                 var $this = $(this);
                 $this.siblings().slideToggle();
                 e.preventDefault();
@@ -80,7 +80,7 @@
     // Parallax background
     function bgParallax() {
         if ($(".parallax").length) {
-            $(".parallax").each(function() {
+            $(".parallax").each(function () {
                 var height = $(this).position().top;
                 var resize = height - $(window).scrollTop();
                 var doParallax = -(resize / 5);
@@ -100,7 +100,7 @@
     // Hero slider background setting
     function sliderBgSetting() {
         if ($(".hero-slider .slide").length) {
-            $(".hero-slider .slide").each(function() {
+            $(".hero-slider .slide").each(function () {
                 var $this = $(this);
                 var img = ($this.find(".slider-bg").attr("src")) ? $this.find(".slider-bg").attr("src") : false;
 
@@ -138,13 +138,13 @@
 
 
 
-    $('.wpo-payment-select .addToggle').on('click', function() {
+    $('.wpo-payment-select .addToggle').on('click', function () {
         $('.payment-name').addClass('active')
         $('.wpo-payment-option').removeClass('active')
     })
 
 
-    $('.wpo-payment-select .removeToggle').on('click', function() {
+    $('.wpo-payment-select .removeToggle').on('click', function () {
         $('.wpo-payment-option').addClass('active')
         $('.payment-name').removeClass('active')
     });
@@ -155,7 +155,7 @@
     -------------------------------------------*/
     function preloader() {
         if ($('.preloader').length) {
-            $('.preloader').delay(100).fadeOut(500, function() {
+            $('.preloader').delay(100).fadeOut(500, function () {
 
                 //active wow
                 wow.init();
@@ -193,7 +193,7 @@
         = POPUP VIDEO
     -------------------------------------------*/
     if ($(".video-btn").length) {
-        $(".video-btn").on("click", function() {
+        $(".video-btn").on("click", function () {
             $.fancybox({
                 href: this.href,
                 type: $(this).data("type"),
@@ -203,7 +203,7 @@
                     media: {}
                 },
 
-                beforeShow: function() {
+                beforeShow: function () {
                     $(".fancybox-wrap").addClass("gallery-fancybox");
                 }
             });
@@ -229,7 +229,7 @@
 
                 duration: 300,
                 easing: 'ease-in-out',
-                opener: function(openerElement) {
+                opener: function (openerElement) {
                     return openerElement.is('img') ? openerElement : openerElement.find('img');
                 }
             }
@@ -252,7 +252,7 @@
                 }
             });
 
-            $(".grid-filters li a").on("click", function() {
+            $(".grid-filters li a").on("click", function () {
                 $('.grid-filters li .current').removeClass('current');
                 $(this).addClass('current');
                 var selector = $(this).attr('data-filter');
@@ -283,7 +283,7 @@
                 percentPosition: true
             });
 
-            $grid.imagesLoaded().progress(function() {
+            $grid.imagesLoaded().progress(function () {
                 $grid.masonry('layout');
             });
         }
@@ -338,14 +338,14 @@
         var searchContent = $(".header-search-form");
         var body = $("body");
 
-        searchToggleBtn.on("click", function(e) {
+        searchToggleBtn.on("click", function (e) {
             searchContent.toggleClass("header-search-content-toggle");
             e.stopPropagation();
         });
 
-        body.on("click", function() {
+        body.on("click", function () {
             searchContent.removeClass("header-search-content-toggle");
-        }).find(searchContent).on("click", function(e) {
+        }).find(searchContent).on("click", function (e) {
             e.stopPropagation();
         });
     }
@@ -359,14 +359,14 @@
         var cartContent = $(".mini-cart-content");
         var body = $("body");
 
-        cartToggleBtn.on("click", function(e) {
+        cartToggleBtn.on("click", function (e) {
             cartContent.toggleClass("mini-cart-content-toggle");
             e.stopPropagation();
         });
 
-        body.on("click", function() {
+        body.on("click", function () {
             cartContent.removeClass("mini-cart-content-toggle");
-        }).find(cartContent).on("click", function(e) {
+        }).find(cartContent).on("click", function (e) {
             e.stopPropagation();
         });
     }
@@ -394,9 +394,9 @@
     -------------------------------------------*/
     if ($(".odometer").length) {
         $('.odometer').appear();
-        $(document.body).on('appear', '.odometer', function(e) {
+        $(document.body).on('appear', '.odometer', function (e) {
             var odo = $(".odometer");
-            odo.each(function() {
+            odo.each(function () {
                 var countNumber = $(this).attr("data-count");
                 $(this).html(countNumber);
             });
@@ -446,60 +446,67 @@
         });
     }
 
+    var channelID = "UCb-4Mr8FtL34-v4mM3E8hiA";
+    var reqURL = "https://www.youtube.com/feeds/videos.xml?channel_id=";
+    $.getJSON("https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent(reqURL) + channelID, function (data) {
+        var link = data.items[0].link;
+        var id = link.substr(link.indexOf("=") + 1);
+        $("#latestVideo").attr("href", "https://youtube.com/embed/" + id + "?controls=0&showinfo=0&rel=0");
+    });
 
     /*------------------------------------------
         = CONTACT FORM SUBMISSION
     -------------------------------------------*/
-    if ($("#contact-form").length) {
-        $("#contact-form").validate({
-            rules: {
-                name: {
-                    required: true,
-                    minlength: 2
-                },
+    // if ($("#contact-form").length) {
+    //     $("#contact-form").validate({
+    //         rules: {
+    //             name: {
+    //                 required: true,
+    //                 minlength: 2
+    //             },
 
-                name2: "required",
+    //             name2: "required",
 
-                email: "required",
+    //             email: "required",
 
-                subject: "required",
+    //             subject: "required",
 
-                address: "required"
-            },
+    //             address: "required"
+    //         },
 
-            messages: {
-                name: "Please enter your name",
-                name2: "Please enter your name",
-                email: "Please enter your email address",
-                subject: "Please enter your Subject",
-            },
+    //         messages: {
+    //             name: "Please enter your name",
+    //             name2: "Please enter your name",
+    //             email: "Please enter your email address",
+    //             subject: "Please enter your Subject",
+    //         },
 
-            submitHandler: function(form) {
-                $.ajax({
-                    type: "POST",
-                    url: "mail.php",
-                    data: $(form).serialize(),
-                    success: function() {
-                        $("#loader").hide();
-                        $("#success").slideDown("slow");
-                        setTimeout(function() {
-                            $("#success").slideUp("slow");
-                        }, 3000);
-                        form.reset();
-                    },
-                    error: function() {
-                        $("#loader").hide();
-                        $("#error").slideDown("slow");
-                        setTimeout(function() {
-                            $("#error").slideUp("slow");
-                        }, 3000);
-                    }
-                });
-                return false; // required to block normal submit since you used ajax
-            }
+    //         submitHandler: function(form) {
+    //             $.ajax({
+    //                 type: "POST",
+    //                 url: "mail.php",
+    //                 data: $(form).serialize(),
+    //                 success: function() {
+    //                     $("#loader").hide();
+    //                     $("#success").slideDown("slow");
+    //                     setTimeout(function() {
+    //                         $("#success").slideUp("slow");
+    //                     }, 3000);
+    //                     form.reset();
+    //                 },
+    //                 error: function() {
+    //                     $("#loader").hide();
+    //                     $("#error").slideDown("slow");
+    //                     setTimeout(function() {
+    //                         $("#error").slideUp("slow");
+    //                     }, 3000);
+    //                 }
+    //             });
+    //             return false; // required to block normal submit since you used ajax
+    //         }
 
-        });
-    }
+    //     });
+    // }
 
 
 
@@ -517,7 +524,7 @@
         }
     }
 
-    $(".back-to-top").on("click", function() {
+    $(".back-to-top").on("click", function () {
         $("html,body").animate({
             scrollTop: 0
         }, 700);
@@ -528,7 +535,7 @@
     /*==========================================================================
         WHEN DOCUMENT LOADING
     ==========================================================================*/
-    $(window).on('load', function() {
+    $(window).on('load', function () {
 
         preloader();
 
@@ -545,7 +552,7 @@
     /*==========================================================================
         WHEN WINDOW SCROLL
     ==========================================================================*/
-    $(window).on("scroll", function() {
+    $(window).on("scroll", function () {
 
         if ($(".wpo-site-header").length) {
             stickyMenu($('.wpo-site-header .navigation'), "sticky-on");
@@ -559,12 +566,12 @@
     /*==========================================================================
         WHEN WINDOW RESIZE
     ==========================================================================*/
-    $(window).on("resize", function() {
+    $(window).on("resize", function () {
 
         toggleClassForSmallNav();
 
         clearTimeout($.data(this, 'resizeTimer'));
-        $.data(this, 'resizeTimer', setTimeout(function() {
+        $.data(this, 'resizeTimer', setTimeout(function () {
             smallNavFunctionality();
         }, 200));
 
@@ -574,7 +581,7 @@
 
     // login
 
-    $(".reveal6").on('click', function() {
+    $(".reveal6").on('click', function () {
         var $pwd = $(".pwd6");
         if ($pwd.attr('type') === 'text') {
             $pwd.attr('type', 'password');
@@ -584,7 +591,7 @@
     });
 
 
-    $(".reveal3").on('click', function() {
+    $(".reveal3").on('click', function () {
         var $pwd = $(".pwd2");
         if ($pwd.attr('type') === 'text') {
             $pwd.attr('type', 'password');
@@ -593,7 +600,7 @@
         }
     });
 
-    $(".reveal2").on('click', function() {
+    $(".reveal2").on('click', function () {
         var $pwd = $(".pwd3");
         if ($pwd.attr('type') === 'text') {
             $pwd.attr('type', 'password');
@@ -604,9 +611,9 @@
 
 
 
-    $(document).ready(function($) {
+    $(document).ready(function ($) {
         function animateElements() {
-            $('.progressbar').each(function() {
+            $('.progressbar').each(function () {
                 var elementPos = $(this).offset().top;
                 var topOfWindow = $(window).scrollTop();
                 var percent = $(this).find('.circle').attr('data-percent');
@@ -623,7 +630,7 @@
                         fill: {
                             color: '#0dc2f8'
                         }
-                    }).on('circle-animation-progress', function(event, progress, stepValue) {
+                    }).on('circle-animation-progress', function (event, progress, stepValue) {
                         $(this).find('div').text((stepValue * 100).toFixed(1) + "%");
                     }).stop();
                 }
@@ -635,9 +642,9 @@
         $(window).scroll(animateElements);
 
     });
-    $(document).ready(function($) {
+    $(document).ready(function ($) {
         function animateElements() {
-            $('.progressbar2').each(function() {
+            $('.progressbar2').each(function () {
                 var elementPos = $(this).offset().top;
                 var topOfWindow = $(window).scrollTop();
                 var percent = $(this).find('.circle').attr('data-percent');
@@ -654,7 +661,7 @@
                         fill: {
                             color: '#ff8f84'
                         }
-                    }).on('circle-animation-progress', function(event, progress, stepValue) {
+                    }).on('circle-animation-progress', function (event, progress, stepValue) {
                         $(this).find('div').text((stepValue * 100).toFixed(1) + "%");
                     }).stop();
                 }
@@ -667,9 +674,9 @@
 
     });
 
-    $(document).ready(function($) {
+    $(document).ready(function ($) {
         function animateElements() {
-            $('.progressbar3').each(function() {
+            $('.progressbar3').each(function () {
                 var elementPos = $(this).offset().top;
                 var topOfWindow = $(window).scrollTop();
                 var percent = $(this).find('.circle').attr('data-percent');
@@ -686,7 +693,7 @@
                         fill: {
                             color: '#8379fe'
                         }
-                    }).on('circle-animation-progress', function(event, progress, stepValue) {
+                    }).on('circle-animation-progress', function (event, progress, stepValue) {
                         $(this).find('div').text((stepValue * 100).toFixed(1) + "%");
                     }).stop();
                 }
