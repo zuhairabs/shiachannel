@@ -15,7 +15,7 @@
     <meta property="og:description" content="Shiachannel - Spreading the Message of Velayat" />
     <meta property="og:url" content="https://zuhairabs.github.io/shiachannel" />
     <meta property="og:site_name" content="Shiachannel" />
-    <meta property="og:image" content="assets/images/logo.png" />
+    <meta property="og:image" content="https://zuhairabs.github.io/shiachannel/assets/images/logo.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <script type='application/ld+json'>
         {
@@ -23,8 +23,8 @@
           "@type": "Store",
           "name": "Shia Channel",
           "url": "https://zuhairabs.github.io/shiachannel",
-          "logo": "assets/images/logo.png",
-          "image": "assets/images/slider/imam-reza-shrine.png",
+          "logo": "https://zuhairabs.github.io/shiachannel/assets/images/logo.png",
+          "image": "https://zuhairabs.github.io/shiachannel/assets/images/slider/imam-reza-shrine.png",
           "description": "Spreading the Message of Velayat",
           "openingHours": "Mo, Tu, We, Th, Fr, Sa, Su -"
         }
@@ -230,24 +230,35 @@
                         </div>
                     </div>
                 </div>
+                <a id="prayer"></a>
                 <div class="timer-section">
                     <div class="row">
                         <div class="col-md-5">
                             <div class="timer-text">
                                 <h2>Prayer Times</h2>
-                                <p>Prayer times in <b>United Arab Emirates</b></p>
-                                <span>Mon 15 Jan, 2020</span>
+                                <p><i class="ti-location-pin"></i> <b style="color:#ee76ba;" id="locPlace">Mumbai,
+                                        India</b></p>
+                                <p><i class="ti-calendar" aria-hidden="true"></i> <span style="color:#df8f73;"
+                                        id="gregDate">Mon 15 Jan, 2021 AD</span></p>
+                                <p><i class="ti-calendar" aria-hidden="true"></i> <span
+                                        style="font-family: Janna;color:#6d64ff" id="hijrDate">Mon 15 Jan, 2021
+                                        AH</span></p>
+                                <p id="holidays"></p>
+                                <p><i class="fa fa-volume-up" aria-hidden="true"></i> <span style="color:#02a0a5">Play
+                                        Azan</span></p>
+                                <audio src="assets/fonts/azan.mp3" controls>Your browser does not support the audio
+                                    element.</audio>
                             </div>
                         </div>
                         <div class="col-md-5 col-md-offset-1">
                             <div class="timer-num">
                                 <ul>
-                                    <li>Fajr<span>05:47</span></li>
-                                    <li>Sunrize<span>07:05</span></li>
-                                    <li>Dhuhr<span>12:34</span></li>
-                                    <li>Asr<span>15:35</span></li>
-                                    <li>Maghrib<span>17:58</span></li>
-                                    <li>Isha'a<span>19:15</span></li>
+                                    <li>Fajr<span id="fajr">05:47</span></li>
+                                    <li>Sunrize<span id="sunrise">07:05</span></li>
+                                    <li>Dhuhr<span id="dhuhr">12:34</span></li>
+                                    <li>Asr<span id="asr">15:35</span></li>
+                                    <li>Maghrib<span id="maghrib">17:58</span></li>
+                                    <li>Isha'a<span id="isha">19:15</span></li>
                                 </ul>
                             </div>
                         </div>
@@ -331,7 +342,7 @@
                             <div class="service-item">
                                 <div class="service-title">
                                     <span> Shiachannel TV</span>
-                                    <h2>hia Islamic TV Channels</h2>
+                                    <h2>Shia Islamic TV Channels</h2>
                                     <p>We have curated Shia Islamic TV Channels from different countries and of
                                         different categories and language.</p>
                                 </div>
@@ -551,7 +562,7 @@
                                         <li><a href="#">Tafseer</a></li>
                                         <li><a href="#">Live TV</a></li>
                                         <li><a href="#">Live Ziyarat</a></li>
-                                        <li><a href="index.html/#prayer">Prayer Times</a></li>
+                                        <li><a href="index.html#prayer">Prayer Times</a></li>
                                     </ul>
                                 </div>
                             </div>

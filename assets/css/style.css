@@ -114,12 +114,22 @@ URL:            http://themeforest.net/user/wpoceans
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Janna';
+    src: url('../fonts/Janna.ttf') format("truetype");
+}
+
+audio {
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+}
 
 /*--------------------------------------------------------------
 #0.1    Theme Reset Style
 --------------------------------------------------------------*/
 html {
     font-size: 16px;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -3839,9 +3849,9 @@ img {
 }
 
 .timer-text span {
-    font-size: 21px;
+    font-size: 18px;
     color: #08b3c0;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .timer-num ul {

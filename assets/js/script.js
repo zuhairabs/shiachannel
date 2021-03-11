@@ -706,5 +706,63 @@
 
     });
 
+    $(document).ready(function ($) {
+        // function getLocation() {
+        //     fetch('https://extreme-ip-lookup.com/json/')
+        //         .then(res => res.json())
+        //         .then(response => {
+        //             // console.log(response.city, response.country);
+        //             return response.city;
+        //         })
+        //         .catch((data, status) => {
+        //             console.log('Request failed', data, status);
+        //         });
+        // }
+
+        function getTimings() {
+            fetch('https://extreme-ip-lookup.com/json/')
+                .then(res => res.json())
+                .then(response => {
+                    $('#locPlace').html(`${response.city}, ${response.country}`);
+                    fetch(`http://api.aladhan.com/v1/timingsByCity?city=${response.city}&country=${response.country}&method=0`)
+                        .then(res => res.json())
+                        .then(data => {
+                            const { data: { timings } } = data;
+                            renderTimings(timings, data);
+                        })
+                        .catch(err => console.log(err));
+                })
+                .catch((data, status) => {
+                    console.log('Request failed', data, status);
+                });
+        }
+
+        function renderTimings(timings, data) {
+            $('#fajr').html(timings.Fajr);
+            $('#sunrise').html(timings.Sunrise);
+            $('#dhuhr').html(timings.Dhuhr);
+            $('#asr').html(timings.Asr);
+            $('#maghrib').html(timings.Maghrib);
+            $('#isha').html(timings.Isha);
+
+            const dat = data.data.date;
+            $('#gregDate').html(`${dat.gregorian.weekday.en}, ${dat.readable}`);
+            var arWeekday = decodeURIComponent(JSON.parse('"' + dat.hijri.weekday.ar.replace(/\"/g, '\\"') + '"'));
+            var arMonth = decodeURIComponent(JSON.parse('"' + dat.hijri.month.ar.replace(/\"/g, '\\"') + '"'));
+            $('#hijrDate').html(`${arWeekday} ${dat.hijri.day} ${arMonth} ${dat.hijri.year}`);
+
+            if (dat.hijri.holidays) {
+                for (let h of dat.hijri.holidays) {
+                    $('#holidays').html(`<i class="ti-announcement" aria-hidden="true"></i> <span style="color:#44a884">${h}</span>`);
+                }
+            } else {
+                $('.holidays').html('No Events Today!');
+            }
+
+        }
+
+        getTimings();
+    });
+
 
 })(window.jQuery);
