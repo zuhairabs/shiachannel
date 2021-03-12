@@ -724,7 +724,7 @@
                 .then(res => res.json())
                 .then(response => {
                     $('#locPlace').html(`${response.city}, ${response.country}`);
-                    fetch(`http://api.aladhan.com/v1/timingsByCity?city=${response.city}&country=${response.country}&method=0`)
+                    fetch(`https://api.aladhan.com/v1/timingsByCity?city=${response.city}&country=${response.country}&method=0`)
                         .then(res => res.json())
                         .then(data => {
                             const { data: { timings } } = data;
