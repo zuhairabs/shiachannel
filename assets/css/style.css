@@ -8597,8 +8597,16 @@ wpo-blog sidebar
     background-color: #029ca5;
     color: #fff;
 }
-
-
 /*----------------------------------------------
 end*
 -----------------------------------------------*/
+
+.hideD {
+    display: none !important;
+}
+
+@media(max-width: 768px){
+    .hideD {
+        display: block !important;
+    }
+}
