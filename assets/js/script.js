@@ -707,18 +707,6 @@
     });
 
     $(document).ready(function ($) {
-        // function getLocation() {
-        //     fetch('https://extreme-ip-lookup.com/json/')
-        //         .then(res => res.json())
-        //         .then(response => {
-        //             // console.log(response.city, response.country);
-        //             return response.city;
-        //         })
-        //         .catch((data, status) => {
-        //             console.log('Request failed', data, status);
-        //         });
-        // }
-
         function getTimings() {
             fetch('https://extreme-ip-lookup.com/json/')
                 .then(res => res.json())
@@ -762,6 +750,15 @@
         }
 
         getTimings();
+    });
+
+    $(document).ready(function ($) {
+        $('#currentLanguage').attr('src', localStorage.getItem('currentLanguage'));
+        $('.lang').on('click', function () {
+            var cImg = $("a:focus").attr('data-image');
+            localStorage.setItem('currentLanguage', cImg);
+            $('#currentLanguage').attr('src', localStorage.getItem('currentLanguage'));
+        });
     });
 
 
