@@ -753,7 +753,13 @@
     });
 
     $(document).ready(function ($) {
-        $('#currentLanguage').attr('src', localStorage.getItem('currentLanguage'));
+        if(localStorage.getItem('currentLanguage')){
+            console.log('Yes Local')
+            $('#currentLanguage').attr('src', localStorage.getItem('currentLanguage'));
+        } else {
+            console.log('No Local')
+            localStorage.setItem('currentLanguage', 'assets/images/flags/america.png');
+        }
         $('.lang').on('click', function () {
             var cImg = $("a:focus").attr('data-image');
             localStorage.setItem('currentLanguage', cImg);
