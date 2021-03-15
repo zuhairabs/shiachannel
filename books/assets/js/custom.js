@@ -690,7 +690,18 @@ Index Of Script
           }
         });
 
-
+          if(localStorage.getItem('currentLanguage')){
+              console.log('Yes Local')
+              jQuery('#currentLanguage').attr('src', localStorage.getItem('currentLanguage'));
+          } else {
+              console.log('No Local')
+              localStorage.setItem('currentLanguage', 'https://zuhairabs.github.io/shiachannel/assets/images/flags/america.png');
+          }
+          $('.lang').on('click', function () {
+              var cImg = jQuery("a:focus").attr('data-image');
+              localStorage.setItem('currentLanguage', cImg);
+              jQuery('#currentLanguage').attr('src', localStorage.getItem('currentLanguage'));
+          });
         
     });
 

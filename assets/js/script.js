@@ -758,7 +758,7 @@
             $('#currentLanguage').attr('src', localStorage.getItem('currentLanguage'));
         } else {
             console.log('No Local')
-            localStorage.setItem('currentLanguage', 'assets/images/flags/america.png');
+            localStorage.setItem('currentLanguage', 'https://zuhairabs.github.io/shiachannel/assets/images/flags/america.png');
         }
         $('.lang').on('click', function () {
             var cImg = $("a:focus").attr('data-image');
