@@ -15,7 +15,7 @@
    <meta property="og:description" content="Shiachannel | Prayer Time - Spreading the Message of Velayat" />
    <meta property="og:url" content="https://zuhairabs.github.io/shiachannel" />
    <meta property="og:site_name" content="Shiachannel" />
-   <meta property="og:image" content="https://zuhairabs.github.io/shiachannel/assets/images/icon/apple-icon.png" />
+   <meta property="og:image" content="https://zuhairabs.github.io/shiachannel/assets/images/icons/apple-icon.png" />
    <meta name="twitter:card" content="summary_large_image" />
    <script type='application/ld+json'>
           {
@@ -23,7 +23,7 @@
             "@type": "Store",
             "name": "Shia Channel",
             "url": "https://zuhairabs.github.io/shiachannel",
-            "logo": "https://zuhairabs.github.io/shiachannel/assets/images/logo.png",
+            "logo": "https://zuhairabs.github.io/shiachannel/assets/images/icons/apple-icon.png",
             "image": "https://zuhairabs.github.io/shiachannel/assets/images/icons/apple-icon.png",
             "description": "Spreading the Message of Velayat",
             "openingHours": "Mo, Tu, We, Th, Fr, Sa, Su -"
@@ -92,15 +92,15 @@
     </header>
     <div class="sub-title">
         <div>
-            <form>
+            <form id="customLoc">
                 <img class="icon" src="img/placeholder.png" alt="">
                 <input id="locPlace" type="text" placeholder="Mumbai">
-                <button>Submit</button>
+                <button>Change</button>
             </form>
         </div>
         <div>
-            <button id ="pdf">Export PDF</button>
-            <button>Export Image</button>
+            <button onclick="Export.pdf()">Export PDF</button>
+            <button onclick="exportimage()">Export Image</button>
         </div>
         <small style="font-size: 10px;">Note: ±1 Difference in Islamic Date can be due to Moon Sighting</small>
     </div>
