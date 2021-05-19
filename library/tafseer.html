@@ -194,17 +194,17 @@
       <div id="sidebar-scrollbar">
         <nav class="iq-sidebar-menu">
           <ul id="iq-sidebar-toggle" class="iq-menu">
-            <li class="active active-menu">
+            <li>
               <a href="#dashboard" class="iq-waves-effect" data-toggle="collapse" aria-expanded="true"><span class="ripple rippleEffect"></span><i class="las la-home iq-arrow-left"></i><span>Dashboard</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
-              <ul id="dashboard" class="iq-submenu collapse show" data-parent="#iq-sidebar-toggle">
+              <ul id="dashboard" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
                 <li class="active"><a href="index.html"><i class="las la-house-damage"></i>Home</a></li>
                 <li><a href="category.html"><i class="ri-function-line"></i>Category Page</a></li>
                 <li><a href="pages-faq.html"><i class="ri-compasses-line"></i>Faq</a></li>
               </ul>
             </li>
-            <li>
+            <li class="active active-menu">
               <a href="#tafseer" class="iq-waves-effect" data-toggle="collapse" aria-expanded="false"><span class="ripple rippleEffect"></span><i class="las la-file-alt"></i><span>Tafseer</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
-              <ul id="tafseer" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
+              <ul id="tafseer" class="iq-submenu collapse show" data-parent="#iq-sidebar-toggle">
                 <li><a href="tafseer.html?id=1"><i class="ri-file-pdf-line"></i>Surah Al Hamd</a></li>
                 <li><a href="tafseer.html?id=2"><i class="ri-file-pdf-line"></i>Surah Al Baqarah</a></li>
                 <li><a href="tafseer.html?id=3"><i class="ri-file-pdf-line"></i>Surah Ale Imran</a></li>                        <li><a href="tafseer.html?id=4"><i class="ri-file-pdf-line"></i>Surah An Nisa</a></li>                        <li><a href="tafseer.html?id=5"><i class="ri-file-pdf-line"></i>Surah Al Maedah</a></li>                        <li><a href="tafseer.html?id=6"><i class="ri-file-pdf-line"></i>Surah Al An'am</a></li>                        <li><a href="tafseer.html?id=7"><i class="ri-file-pdf-line"></i>Surah Al Ar'af</a></li>                        <li><a href="tafseer.html?id=8"><i class="ri-file-pdf-line"></i>Surah Al Anfal</a></li>                        <li><a href="tafseer.html?id=9"><i class="ri-file-pdf-line"></i>Surah At Tawbah</a></li>                        <li><a href="tafseer.html?id=10"><i class="ri-file-pdf-line"></i>Surah Al Yunus</a></li>                        <li><a href="tafseer.html?id=11"><i class="ri-file-pdf-line"></i>Surah Al Hud</a></li>
@@ -526,6 +526,18 @@
             </div>
           </div>
         </div>
+
+        <a id="top"></a>
+        <div id="sidebar-bottom" class="p-0">
+          <div class="iq-card">
+            <div class="iq-card-body">
+              <div class="sidebarbottom-content">
+                <a href="#bottom"
+                  class="btn w-100 btn-primary mt-0 view-more">Move to Bottom</a>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="row">
           <div class="col-lg-12">
             <div class="iq-card">
@@ -538,6 +550,18 @@
       </div>
     </div>
   </div>
+
+  <div id="sidebar-bottom" class="p-0">
+    <div class="iq-card">
+      <div class="iq-card-body">
+        <div class="sidebarbottom-content">
+          <a href="#top"
+            class="btn w-100 btn-primary mt-0 view-more">Go to Top</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a id="bottom"></a>
   <!-- Wrapper END -->
   <!-- Footer -->
   <footer class="iq-footer">
