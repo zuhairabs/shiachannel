@@ -1494,7 +1494,7 @@ var channels = [{
     featured: false,
     popular: false,
     active: true,
-  },{
+  }, {
     id: 110,
     name: "Al Zahra TV",
     url: "https://live.al-zahratv.com/live/playlist.m3u8",
@@ -1696,7 +1696,7 @@ const renderFeaturedBottom = (arr) => {
   $('#newest').html("");
   for (let obj of arr) {
     let html = `
-   <div class="card">
+    <div class="card">
     <a href="details.html?id=${obj.id}" class="card__cover">
     <img width="192" height="270" src="${obj.img}" alt="${obj.name}">
     <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.1615 8.05308C13.1615 9.79908 11.7455 11.2141 9.9995 11.2141C8.2535 11.2141 6.8385 9.79908 6.8385 8.05308C6.8385 6.30608 8.2535 4.89108 9.9995 4.89108C11.7455 4.89108 13.1615 6.30608 13.1615 8.05308Z" stroke-linecap="round" stroke-linejoin="round"/><path fill-rule="evenodd" clip-rule="evenodd" d="M9.998 15.3549C13.806 15.3549 17.289 12.6169 19.25 8.05289C17.289 3.48888 13.806 0.750885 9.998 0.750885H10.002C6.194 0.750885 2.711 3.48888 0.75 8.05289C2.711 12.6169 6.194 15.3549 10.002 15.3549H9.998Z" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -1964,7 +1964,7 @@ $('#flixtv').append("");
   </div>
   `
 
-  $('#flixtv').append(html); 
+  $('#flixtv').append(html);
 }
 
 fetch('https://www.googleapis.com/youtube/v3/search?key=AIzaSyC3wVhwr_r5xAFA5Fw1IxYtmKs9C19SYiE&channelId=UCb-4Mr8FtL34-v4mM3E8hiA&part=snippet,id&order=date&maxResults=10')
@@ -1981,29 +1981,29 @@ fetch('https://www.googleapis.com/youtube/v3/search?key=AIzaSyC3wVhwr_r5xAFA5Fw1
 // Render Suggestions
 const renderSuggestions = (arr) => {
   $('#series').html("");
-  for(let obj of arr){
+  for (let obj of arr) {
     console.log(obj);
-      let html = `
-  <div class="series">
-										<a href="details.html?id=${obj.id}" class="series__cover">
-											<img width='280' height='140' src="${obj.img}" alt="">
-											<span>
-												<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11 1C16.5228 1 21 5.47716 21 11C21 16.5228 16.5228 21 11 21C5.47716 21 1 16.5228 1 11C1 5.47716 5.47716 1 11 1Z" stroke-linecap="round" stroke-linejoin="round"/><path fill-rule="evenodd" clip-rule="evenodd" d="M14.0501 11.4669C13.3211 12.2529 11.3371 13.5829 10.3221 14.0099C10.1601 14.0779 9.74711 14.2219 9.65811 14.2239C9.46911 14.2299 9.28711 14.1239 9.19911 13.9539C9.16511 13.8879 9.06511 13.4569 9.03311 13.2649C8.93811 12.6809 8.88911 11.7739 8.89011 10.8619C8.88911 9.90489 8.94211 8.95489 9.04811 8.37689C9.07611 8.22089 9.15811 7.86189 9.18211 7.80389C9.22711 7.69589 9.30911 7.61089 9.40811 7.55789C9.48411 7.51689 9.57111 7.49489 9.65811 7.49789C9.74711 7.49989 10.1091 7.62689 10.2331 7.67589C11.2111 8.05589 13.2801 9.43389 14.0401 10.2439C14.1081 10.3169 14.2951 10.5129 14.3261 10.5529C14.3971 10.6429 14.4321 10.7519 14.4321 10.8619C14.4321 10.9639 14.4011 11.0679 14.3371 11.1549C14.3041 11.1999 14.1131 11.3999 14.0501 11.4669Z" stroke-linecap="round" stroke-linejoin="round"/></svg> ${obj.active ? 'Live' : ''}
-											</span>
-										</a>
-										<h3 class="series__title"><a href="details.html.html?id=${obj.id}">${obj.name}</a></h3>
-									</div>
-  `
-  $('#series').append(html);
+    let html = `
+    <div class="series">
+    <a href="details.html?id=${obj.id}" class="series__cover">
+    <img width='280' height='140' src="${obj.img}" alt="">
+    <span>
+    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11 1C16.5228 1 21 5.47716 21 11C21 16.5228 16.5228 21 11 21C5.47716 21 1 16.5228 1 11C1 5.47716 5.47716 1 11 1Z" stroke-linecap="round" stroke-linejoin="round"/><path fill-rule="evenodd" clip-rule="evenodd" d="M14.0501 11.4669C13.3211 12.2529 11.3371 13.5829 10.3221 14.0099C10.1601 14.0779 9.74711 14.2219 9.65811 14.2239C9.46911 14.2299 9.28711 14.1239 9.19911 13.9539C9.16511 13.8879 9.06511 13.4569 9.03311 13.2649C8.93811 12.6809 8.88911 11.7739 8.89011 10.8619C8.88911 9.90489 8.94211 8.95489 9.04811 8.37689C9.07611 8.22089 9.15811 7.86189 9.18211 7.80389C9.22711 7.69589 9.30911 7.61089 9.40811 7.55789C9.48411 7.51689 9.57111 7.49489 9.65811 7.49789C9.74711 7.49989 10.1091 7.62689 10.2331 7.67589C11.2111 8.05589 13.2801 9.43389 14.0401 10.2439C14.1081 10.3169 14.2951 10.5129 14.3261 10.5529C14.3971 10.6429 14.4321 10.7519 14.4321 10.8619C14.4321 10.9639 14.4011 11.0679 14.3371 11.1549C14.3041 11.1999 14.1131 11.3999 14.0501 11.4669Z" stroke-linecap="round" stroke-linejoin="round"/></svg> ${obj.active ? 'Live': ''}
+    </span>
+    </a>
+    <h3 class="series__title"><a href="details.html.html?id=${obj.id}">${obj.name}</a></h3>
+    </div>
+    `
+    $('#series').append(html);
   }
 }
 
 // Get Suggestions
 const getSuggestions = (prevObj) => {
   let suggestions = [];
-  for(let obj of channels) {
-    if(obj.language == prevObj.language){
-      if(obj.id != prevObj.id) {
+  for (let obj of channels) {
+    if (obj.language == prevObj.language) {
+      if (obj.id != prevObj.id) {
         suggestions.push(obj)
       }
     }
@@ -2015,25 +2015,30 @@ const getSuggestions = (prevObj) => {
 
 // Render Details
 const renderDetails = (id) => {
-  for(obj of channels) {
-    if(obj.id == id) {
-      $('#detailImgTop').data('bg',obj.img);
+  for (obj of channels) {
+    if (obj.id == id) {
+      $('#detailImgTop').data('bg', obj.img);
       $('#detailTitle').text(obj.name);
       $('#detailCategory').text(obj.category);
       $('#detailLanguage').text(obj.language);
       $('#detailCountry').text(obj.country);
-      $('#detailLive').text(obj.popular ? 'Live' : '');
+      $('#detailLive').text(obj.active ? 'Live': '');
       $('#detailDescription').text(obj.description);
-      $('#player').attr('poster',obj.img);
-      $('#detailVideo-576').attr('src',obj.url);
-      $('#detailVideo-720').attr('src',obj.url);
-      $('#detailVideo-1080').attr('src',obj.url);
+      if (obj.url.includes('.m3u8')) {
+        $('#player').attr('poster', obj.img);
+        $('#detailVideo-576').attr('src', obj.url);
+        $('#detailVideo-720').attr('src', obj.url);
+        $('#detailVideo-1080').attr('src', obj.url);
+      } else {
+        let html = `<a href="${obj.url}" target="_blank"><video id="player" poster="${obj.img}" /></a>`
+        $('#switchPlayer').html(html);
+      }
       $('#tags').html(`
         <h3 class="categories__title">Tags</h3>
-					<a href="category.html" class="categories__item">${obj.category}</a>
-					<a href="category.html" class="categories__item">${obj.language}</a>
-					<a href="category.html" class="categories__item">${obj.country}</a>
-      `);
+        <a href="category.html" class="categories__item">${obj.category}</a>
+        <a href="category.html" class="categories__item">${obj.language}</a>
+        <a href="category.html" class="categories__item">${obj.country}</a>
+        `);
       getSuggestions(obj)
     }
   }
@@ -2041,8 +2046,26 @@ const renderDetails = (id) => {
 
 //get Id
 let searchParams = new URLSearchParams(window.location.search)
-if(searchParams.has('id')){
+if (searchParams.has('id')) {
   let id = searchParams.get('id')
   renderDetails(id);
   //console.log(id);
 }
+
+let autoCompleteData = [];
+channels.map(a => {
+  let obj = Object.assign({}, {
+    label: a.name, value: a.id
+  });
+  autoCompleteData = [...autoCompleteData, obj]
+});
+
+$(function() {
+  $("#search-channel").autocomplete({
+    source: autoCompleteData,
+    //appendTo: $("#channelSuggestions").next(),
+    select: function(event, ui) {
+      window.open(`http://localhost:8158/details.html?id=${ui.item.value}`, '_blank')
+    }
+  });
+});

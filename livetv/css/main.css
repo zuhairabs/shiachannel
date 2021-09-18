@@ -5487,3 +5487,36 @@ body::-webkit-scrollbar-thumb {
 .plyr--video .plyr__control svg {
   filter: none;
 }
+
+.ui-autocomplete {
+    position: absolute !important;
+    top: 16% !important;
+    left: 5% !important;
+    z-index: 9999;
+    background-color: #151f30 !important;
+    border: none !important;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2) !important;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+}
+
+.ui-menu-item > a.ui-corner-all {
+    display: block;
+    padding: 15px 15px !important;
+    font-weight: normal !important;
+    line-height: 18px !important;
+    color: #fff !important;
+    white-space: nowrap !important;
+    text-decoration: none !important;
+}
+
+.ui-widget-content {
+  background: #151f30 !important;
+  border: none;
+}
