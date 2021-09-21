@@ -12,6 +12,30 @@ var channels = [{
   featured: true,
   popular: true,
   active: true,
+}, {
+  id: 125,
+  name: "Imam Ali Shrine",
+  url: "https://youtube.com/channel/UCi4CSgJk3i_slWnWG9Y14qA",
+  img: "img/channels/im-ali-shrine.jpg",
+  country: "iraq",
+  language: "arabic",
+  category: "ziyarat",
+  description: "The Sanctuary of Imam 'Ali, is a mosque which many Muslims believe contains the tomb of Caliph and Imam 'Alī ibn Abī Tālib, it is holy to both Sunni and Shia Islam. He was a cousin of the Islamic prophet Muhammad and later became his son-in-law as well. The Shias consider Ali as their first Imam, and the Sunnis regard him as their fourth Sunni Rashidun Caliph.[1] Each year millions of pilgrims visit the Shrine and pay tribute to Caliph Ali ibn Abi Talib, and the Ottoman Sultan Abdülaziz also offered gifts to the sactuary of the fourth Caliph.",
+  featured: false,
+  popular: true,
+  active: false,
+}, {
+  id: 126,
+  name: "Shia Channel",
+  url: "https://m.youtube.com/c/SHIACHANNEL110",
+  img: "https://shiachannel.in/assets/images/icons/apple-icon.png",
+  country: "india",
+  language: "urdu",
+  category: "general",
+  description: "Shia Channel is a Dhia Islamic TV Channel on Youtube which Live Stream Majalis/Juloos and other Islamic events.",
+  featured: false,
+  popular: true,
+  active: false,
 },
   {
     id: 2,
@@ -1657,7 +1681,7 @@ const renderFeatured = (arr) => {
     <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
     <div class="card">
     <a href="details.html?id=${obj.id}" class="card__cover">
-    <img width="192" height="270" src="${obj.img}" alt="${obj.name}">
+    <img width="192" height="150" src="${obj.img}" alt="${obj.name}">
     ${obj.active? '<span class="live__status">live</span>': ''}
     <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11 1C16.5228 1 21 5.47716 21 11C21 16.5228 16.5228 21 11 21C5.47716 21 1 16.5228 1 11C1 5.47716 5.47716 1 11 1Z" stroke-linecap="round" stroke-linejoin="round"/><path fill-rule="evenodd" clip-rule="evenodd" d="M14.0501 11.4669C13.3211 12.2529 11.3371 13.5829 10.3221 14.0099C10.1601 14.0779 9.74711 14.2219 9.65811 14.2239C9.46911 14.2299 9.28711 14.1239 9.19911 13.9539C9.16511 13.8879 9.06511 13.4569 9.03311 13.2649C8.93811 12.6809 8.88911 11.7739 8.89011 10.8619C8.88911 9.90489 8.94211 8.95489 9.04811 8.37689C9.07611 8.22089 9.15811 7.86189 9.18211 7.80389C9.22711 7.69589 9.30911 7.61089 9.40811 7.55789C9.48411 7.51689 9.57111 7.49489 9.65811 7.49789C9.74711 7.49989 10.1091 7.62689 10.2331 7.67589C11.2111 8.05589 13.2801 9.43389 14.0401 10.2439C14.1081 10.3169 14.2951 10.5129 14.3261 10.5529C14.3971 10.6429 14.4321 10.7519 14.4321 10.8619C14.4321 10.9639 14.4011 11.0679 14.3371 11.1549C14.3041 11.1999 14.1131 11.3999 14.0501 11.4669Z" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
@@ -1735,7 +1759,7 @@ const renderPopular = (arr) => {
     <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
     <div class="card">
     <a href="details.html?id=${obj.id}" class="card__cover">
-    <img width="192" height="270" src="${obj.img}" alt="${obj.name}">
+    <img width="192" height="150" src="${obj.img}" alt="${obj.name}">
     ${obj.active? '<span class="live__status">live</span>': ''}
     <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11 1C16.5228 1 21 5.47716 21 11C21 16.5228 16.5228 21 11 21C5.47716 21 1 16.5228 1 11C1 5.47716 5.47716 1 11 1Z" stroke-linecap="round" stroke-linejoin="round"/><path fill-rule="evenodd" clip-rule="evenodd" d="M14.0501 11.4669C13.3211 12.2529 11.3371 13.5829 10.3221 14.0099C10.1601 14.0779 9.74711 14.2219 9.65811 14.2239C9.46911 14.2299 9.28711 14.1239 9.19911 13.9539C9.16511 13.8879 9.06511 13.4569 9.03311 13.2649C8.93811 12.6809 8.88911 11.7739 8.89011 10.8619C8.88911 9.90489 8.94211 8.95489 9.04811 8.37689C9.07611 8.22089 9.15811 7.86189 9.18211 7.80389C9.22711 7.69589 9.30911 7.61089 9.40811 7.55789C9.48411 7.51689 9.57111 7.49489 9.65811 7.49789C9.74711 7.49989 10.1091 7.62689 10.2331 7.67589C11.2111 8.05589 13.2801 9.43389 14.0401 10.2439C14.1081 10.3169 14.2951 10.5129 14.3261 10.5529C14.3971 10.6429 14.4321 10.7519 14.4321 10.8619C14.4321 10.9639 14.4011 11.0679 14.3371 11.1549C14.3041 11.1999 14.1131 11.3999 14.0501 11.4669Z" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
@@ -1809,7 +1833,7 @@ const renderZiyarat = (arr) => {
     <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
     <div class="card">
     <a href="details.html?id=${obj.id}" class="card__cover">
-    <img width="192" height="270" src="${obj.img}" alt="${obj.name}">
+    <img width="192" height="150" src="${obj.img}" alt="${obj.name}">
     ${obj.active? '<span class="live__status">live</span>': ''}
     <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11 1C16.5228 1 21 5.47716 21 11C21 16.5228 16.5228 21 11 21C5.47716 21 1 16.5228 1 11C1 5.47716 5.47716 1 11 1Z" stroke-linecap="round" stroke-linejoin="round"/><path fill-rule="evenodd" clip-rule="evenodd" d="M14.0501 11.4669C13.3211 12.2529 11.3371 13.5829 10.3221 14.0099C10.1601 14.0779 9.74711 14.2219 9.65811 14.2239C9.46911 14.2299 9.28711 14.1239 9.19911 13.9539C9.16511 13.8879 9.06511 13.4569 9.03311 13.2649C8.93811 12.6809 8.88911 11.7739 8.89011 10.8619C8.88911 9.90489 8.94211 8.95489 9.04811 8.37689C9.07611 8.22089 9.15811 7.86189 9.18211 7.80389C9.22711 7.69589 9.30911 7.61089 9.40811 7.55789C9.48411 7.51689 9.57111 7.49489 9.65811 7.49789C9.74711 7.49989 10.1091 7.62689 10.2331 7.67589C11.2111 8.05589 13.2801 9.43389 14.0401 10.2439C14.1081 10.3169 14.2951 10.5129 14.3261 10.5529C14.3971 10.6429 14.4321 10.7519 14.4321 10.8619C14.4321 10.9639 14.4011 11.0679 14.3371 11.1549C14.3041 11.1999 14.1131 11.3999 14.0501 11.4669Z" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
@@ -1849,7 +1873,7 @@ const renderAll = (arr) => {
     let html = `						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
     <div class="card">
     <a href="details.html?id=${obj.id}" class="card__cover">
-    <img width="192" height="270" src="${obj.img}" alt="${obj.name}">
+    <img width="192" height="150" src="${obj.img}" alt="${obj.name}">
     ${obj.active? '<span class="live__status">live</span>': ''}
     <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11 1C16.5228 1 21 5.47716 21 11C21 16.5228 16.5228 21 11 21C5.47716 21 1 16.5228 1 11C1 5.47716 5.47716 1 11 1Z" stroke-linecap="round" stroke-linejoin="round"/><path fill-rule="evenodd" clip-rule="evenodd" d="M14.0501 11.4669C13.3211 12.2529 11.3371 13.5829 10.3221 14.0099C10.1601 14.0779 9.74711 14.2219 9.65811 14.2239C9.46911 14.2299 9.28711 14.1239 9.19911 13.9539C9.16511 13.8879 9.06511 13.4569 9.03311 13.2649C8.93811 12.6809 8.88911 11.7739 8.89011 10.8619C8.88911 9.90489 8.94211 8.95489 9.04811 8.37689C9.07611 8.22089 9.15811 7.86189 9.18211 7.80389C9.22711 7.69589 9.30911 7.61089 9.40811 7.55789C9.48411 7.51689 9.57111 7.49489 9.65811 7.49789C9.74711 7.49989 10.1091 7.62689 10.2331 7.67589C11.2111 8.05589 13.2801 9.43389 14.0401 10.2439C14.1081 10.3169 14.2951 10.5129 14.3261 10.5529C14.3971 10.6429 14.4321 10.7519 14.4321 10.8619C14.4321 10.9639 14.4011 11.0679 14.3371 11.1549C14.3041 11.1999 14.1131 11.3999 14.0501 11.4669Z" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
@@ -1905,7 +1929,7 @@ const renderSelected = (arr) => {
     let html = `						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
     <div class="card">
     <a href="details.html?id=${obj.id}" class="card__cover">
-    <img width="192" height="270" src="${obj.img}" alt="${obj.name}">
+    <img width="192" height="150" src="${obj.img}" alt="${obj.name}">
     ${obj.active? '<span class="live__status">live</span>': ''}
     <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11 1C16.5228 1 21 5.47716 21 11C21 16.5228 16.5228 21 11 21C5.47716 21 1 16.5228 1 11C1 5.47716 5.47716 1 11 1Z" stroke-linecap="round" stroke-linejoin="round"/><path fill-rule="evenodd" clip-rule="evenodd" d="M14.0501 11.4669C13.3211 12.2529 11.3371 13.5829 10.3221 14.0099C10.1601 14.0779 9.74711 14.2219 9.65811 14.2239C9.46911 14.2299 9.28711 14.1239 9.19911 13.9539C9.16511 13.8879 9.06511 13.4569 9.03311 13.2649C8.93811 12.6809 8.88911 11.7739 8.89011 10.8619C8.88911 9.90489 8.94211 8.95489 9.04811 8.37689C9.07611 8.22089 9.15811 7.86189 9.18211 7.80389C9.22711 7.69589 9.30911 7.61089 9.40811 7.55789C9.48411 7.51689 9.57111 7.49489 9.65811 7.49789C9.74711 7.49989 10.1091 7.62689 10.2331 7.67589C11.2111 8.05589 13.2801 9.43389 14.0401 10.2439C14.1081 10.3169 14.2951 10.5129 14.3261 10.5529C14.3971 10.6429 14.4321 10.7519 14.4321 10.8619C14.4321 10.9639 14.4011 11.0679 14.3371 11.1549C14.3041 11.1999 14.1131 11.3999 14.0501 11.4669Z" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
@@ -2065,7 +2089,7 @@ $(function() {
     source: autoCompleteData,
     //appendTo: $("#channelSuggestions").next(),
     select: function(event, ui) {
-      window.open(`http://localhost:8158/details.html?id=${ui.item.value}`, '_blank')
+      window.open(`https://shiachannel.in/livetv/details.html?id=${ui.item.value}`, '_blank')
     }
   });
 });
