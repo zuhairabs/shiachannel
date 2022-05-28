@@ -1,16 +1,209 @@
-html,
-body {
+@import url("/assets/css/animate.css");
+@import url("/assets/css/owl.carousel.css");
+@import url("/assets/css/owl.theme.css");
+@import url("/assets/css/sal.css");
+@import url("/assets/css/slick.css");
+@import url("/assets/css/slick-theme.css");
+@import url("/assets/css/swiper.min.css");
+@import url("/assets/css/owl.transitions.css");
+@import url("/assets/css/jquery.fancybox.css");
+@import url("/assets/css/odometer-theme-default.css");
+@import url("/assets/css/nice-select.css");
+@import url("/assets/css/themify-icons.css");
+@import url("/assets/css/flaticon.css");
+@import url("/assets/css/style.css");
+
+/* Theme Switcher */
+
+@media only screen and (min-width: 991px) {
+  .my_switcher {
+    position: fixed;
+    bottom: 100px;
+    left: 0;
+    background-color: rgba(0, 198, 209, 0.7);
+    border-radius: 0 30px 30px 0;
+    padding: 10px;
+    z-index: 5;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .my_switcher {
+    position: initial;
+    display: none;
+  }
+}
+
+.my_switcher ul {
+  list-style: none;
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.my_switcher ul li a {
+  position: relative;
+  top: 4px;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  border: 1px solid transparent;
+  border-radius: 50%;
 }
 
-* {
-  box-sizing: border-box;
+@media only screen and (max-width: 767px) {
+  .my_switcher ul li a {
+    position: relative;
+    top: 4px;
+    font-size: 16px;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+  }
+}
+
+.my_switcher ul li a.active {
+  color: pink;
+  display: none;
+}
+
+.main-wrapper {
+  overflow: hidden;
+  background-color: #fff;
+}
+
+/* Mobile */
+
+.navbar-header .my_switcher {
+  position: absolute;
+  top: 20px;
+  right: 90px;
+  background-color: rgba(0, 198, 209, 0.7);
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (min-width: 991px) {
+  .navbar-header .my_switcher {
+    display: none;
+  }
+}
+
+/* Error Page */
+
+.fit-wide {
+  position: relative;
+  overflow: hidden;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.background-wrap {
+  position: relative;
+}
+
+.background-wrap.cloud-blue {
+  background-color: #b0e0e9;
+}
+
+.background-wrap.white {
+  background-color: #fff;
+}
+
+.title {
+  position: relative;
+  text-align: center;
+  margin: 20px auto 10px;
+}
+
+.title--regular {
+  font-family: "Roboto", Arial, sans-serif;
+}
+
+.title--size-large {
+  font-size: 36px;
+  line-height: 46px;
+}
+
+.title--size-semimedium {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.title--weight-normal {
+  font-weight: 400;
+}
+
+.title--weight-bold {
+  font-weight: 700;
+}
+
+.title--subtitle {
+  padding-bottom: 40px;
+  font-family: "Open Sans", Arial, sans-serif;
+  text-align: center;
+}
+
+.error h1,
+.error p {
+  color: #226d7a;
+}
+
+.error--bg__cover {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.error--shape__clouds svg {
+  display: block;
+}
+
+.abstract-half-dot--circle {
+  z-index: 0;
+  position: absolute;
+  left: 15em;
+  right: 0;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+.icon-graphic {
+  z-index: 1;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 767px) {
+  .error--bg__cover {
+    display: none;
+  }
+
+  .abstract-half-dot--circle {
+    left: 0;
+  }
 }
