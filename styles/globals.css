@@ -207,3 +207,7 @@
     left: 0;
   }
 }
+
+body.active-dark-mode :not(img) {
+  filter: invert(1) hue-rotate(180deg);
+}
