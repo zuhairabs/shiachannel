@@ -1,44 +1,48 @@
 $(document).ready(function ($) {
-  $("#customLoc").submit(function(event) {
+  $("#customLoc").submit(function (event) {
     //console.log(event);
     let loc = $("#locPlace").val();
     let locArray = loc.split(",");
     //console.log(locArray);
-          fetch(`https://api.aladhan.com/v1/calendarByCity?city=${locArray[0]}&country=${locArray[1]}&method=0`)
-                        .then(res => res.json())
-                        .then(d => {
-                            const { data } = d;
-                            renderTimings(data);
-                            //console.log(data);
-                        })
-                        .catch(err => console.log(err));
-    
+    fetch(
+      `https://api.aladhan.com/v1/calendarByCity?city=${locArray[0]}&country=${locArray[1]}&method=0`
+    )
+      .then((res) => res.json())
+      .then((d) => {
+        const { data } = d;
+        renderTimings(data);
+        //console.log(data);
+      })
+      .catch((err) => console.log(err));
+
     event.preventDefault();
   });
 
   function getTimings() {
-    fetch('https://extreme-ip-lookup.com/json/')
-    .then(res => res.json())
-    .then(response => {
-      $('#locPlace').val(`${response.city}, ${response.country}`);
-      fetch(`https://api.aladhan.com/v1/calendarByCity?city=${response.city}&country=${response.country}&method=0`)
-      .then(res => res.json())
-      .then(d => {
-        const {
-          data
-        } = d;
-        renderTimings(data);
-        //console.log(data);
+    fetch("https://extreme-ip-lookup.com/json/?key=pIYZ1izkEc9SjDx76odS")
+      .then((res) => res.json())
+      .then((response) => {
+        $("#locPlace").val(`${response.city}, ${response.country}`);
+        fetch(
+          `https://api.aladhan.com/v1/calendarByCity?city=${
+            response.city ? response.city : "Mumbai"
+          }&country=${response.country ? response.country : "India"}&method=0`
+        )
+          .then((res) => res.json())
+          .then((d) => {
+            const { data } = d;
+            renderTimings(data);
+            //console.log(data);
+          })
+          .catch((err) => console.log(err));
       })
-      .catch(err => console.log(err));
-    })
-    .catch((data, status) => {
-      console.log('Request failed', data, status);
-    });
+      .catch((data, status) => {
+        console.log("Request failed", data, status);
+      });
   }
 
   function renderTimings(data) {
-    $('#time-table').html(`<tr>
+    $("#time-table").html(`<tr class="heading-row">
                 <th id="eMonth">Month</th>
                 <th id="aMonth">Month</th>
                 <th>Fajr</th>
@@ -47,11 +51,11 @@ $(document).ready(function ($) {
                 <th>Sunrise</th>
                 <th>Sunset</th>
             </tr>`);
-    $('#eMonth').text(data[0].date.gregorian.month.en);
-    $('#aMonth').text(data[0].date.hijri.month.en);
+    $("#eMonth").text(data[0].date.gregorian.month.en);
+    $("#aMonth").text(data[0].date.hijri.month.en);
     for (let d of data) {
-      $('#time-table').append(`
-        <tr>
+      $("#time-table").append(`
+        <tr class='data-row'>
         <td>${d.date.gregorian.day}</td>
         <td>${d.date.hijri.day}</td>
         <td>${d.timings.Fajr.substring(0, 6)}</td>
@@ -59,7 +63,7 @@ $(document).ready(function ($) {
         <td>${d.timings.Maghrib.substring(0, 6)}</td>
         <td>${d.timings.Sunrise.substring(0, 6)}</td>
         <td>${d.timings.Sunset.substring(0, 6)}</td>
-        </tr>`)
+        </tr>`);
       //console.log(d.timings.Fajr, count);
     }
   }
@@ -67,34 +71,39 @@ $(document).ready(function ($) {
   getTimings();
 });
 
-
-
-
 // Export
-var Export = new function () {
+var Export = new (function () {
   this.pdf = function () {
-    var tab = document.getElementById('time-table');
-    fetch('https://extreme-ip-lookup.com/json/')
-    .then(res => res.json())
-    .then(response => {
-      var style = "<style>";
-      style = style + "table {width: 100%;font: 17px Nunito;}";
-      style = style + "h1, h2 h3, p {font-size: 15px; font-family: Nunito;}";
-      style = style + "table, th, td {border: solid 1px #DDD; border-collapse: collapse;";
-      style = style + "padding: 2px 3px;text-align: center;}";
-      //style = style + "";
-      style = style + "* { -webkit-print-color-adjust: exact !important; color-adjust: exact !important;}"
-      style = style + "</style>";
+    var tab = document.getElementById("time-table");
+    fetch("https://extreme-ip-lookup.com/json/")
+      .then((res) => res.json())
+      .then((response) => {
+        var style = "<style>";
+        style = style + "table {width: 100%;font: 17px Nunito;}";
+        style = style + "h1, h2 h3, p {font-size: 15px; font-family: Nunito;}";
+        style =
+          style +
+          "table, th, td {border: solid 1px #DDD; border-collapse: collapse;";
+        style = style + "padding: 2px 3px;text-align: center;}";
+        //style = style + "";
+        style =
+          style +
+          "* { -webkit-print-color-adjust: exact !important; color-adjust: exact !important;}";
+        style = style + "</style>";
 
-      var win = window.open('', '', 'height=700,width=700');
-      win.document.write(style); //  add the style.
-      win.document.write('<head><link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet"></head>')
-      win.document.write(`<body><center><b><h1>Prayer Time - ${response.city}, ${response.country}</b><h1><center>`);
-      win.document.write("<center><p>Provided By Shia Channel<p></center>")
-      win.document.write(tab.outerHTML);
-      win.document.write("</body>");
-      win.document.close();
-      win.print();
-    });
-  }
-}
+        var win = window.open("", "", "height=700,width=700");
+        win.document.write(style); //  add the style.
+        win.document.write(
+          '<head><link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet"></head>'
+        );
+        win.document.write(
+          `<body><center><b><h1>Prayer Time - ${response.city}, ${response.country}</b><h1><center>`
+        );
+        win.document.write("<center><p>Provided By Shia Channel<p></center>");
+        win.document.write(tab.outerHTML);
+        win.document.write("</body>");
+        win.document.close();
+        win.print();
+      });
+  };
+})();
