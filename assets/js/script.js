@@ -753,9 +753,9 @@
       $("#fajr").html(timings.Fajr);
       $("#sunrise").html(timings.Sunrise);
       $("#dhuhr").html(timings.Dhuhr);
-      $("#asr").html(timings.Asr);
+      // $("#asr").html(timings.Asr);
       $("#maghrib").html(timings.Maghrib);
-      $("#isha").html(timings.Isha);
+      $("#isha").html(timings.Sunset);
 
       const dat = data.data.date;
       $("#gregDate").html(`${dat.gregorian.weekday.en}, ${dat.readable}`);
