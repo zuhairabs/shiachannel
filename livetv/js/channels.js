@@ -244,7 +244,7 @@ var channels = [
   {
     id: 16,
     name: "Zainabia Channel",
-    url: "https://zainabia2.livebox.co.in/Zainabiachannel2hls/live.m3u8",
+    url: "https://zainabia.livebox.co.in/ZainabiaChannelhls/channel.m3u8",
     img: "img/channels/zainabia.jpg",
     country: "india",
     language: "urdu",
@@ -273,7 +273,7 @@ var channels = [
   {
     id: 18,
     name: "Channel Win",
-    url: "http://cdn.smartstream.video/smartstream-us/channelwinlive/channelwinlive/playlist.m3u8",
+    url: "https://streamer.winfoundation.in:8081/live/winstream/playlist.m3u8",
     img: "img/channels/win.png",
     country: "india",
     language: "urdu",
@@ -288,7 +288,7 @@ var channels = [
   {
     id: 19,
     name: "Husaini Channel",
-    url: "http://5k8q87xzdy4v-hls-live.wmncdn.net/hctv/d0dbe915091d400bd8ee7f27f0791303.sdp/playlist.m3u8",
+    url: "https://www.youtube.com/embed/live_stream?channel=UC3ye2VRF4vV0OYl8BQ-J3zA&autoplay=1",
     img: "img/channels/husaini.jpg",
     country: "india",
     language: "urdu",
@@ -302,7 +302,7 @@ var channels = [
   {
     id: 20,
     name: "Imam Hussein TV 4",
-    url: "https://ur.imamhusseintv.com/live/ih4.m3u8",
+    url: "https://mn-nl.mncdn.com/ihtv4/ihtv4_sd.smil/playlist.m3u8",
     img: "img/channels/hussein-tv4.png",
     country: "uk",
     language: "urdu",
@@ -316,7 +316,7 @@ var channels = [
   {
     id: 21,
     name: "Hidayat TV",
-    url: "https://5928f90056f31.streamlock.net/hidayat-live/hidayat/playlist.m3u8",
+    url: "https://stream.wpbond.com/live/hidayat1.m3u8",
     img: "img/channels/hidayat.jpg",
     country: "pakistan",
     language: "urdu",
@@ -329,7 +329,7 @@ var channels = [
   {
     id: 22,
     name: "Al Mahdi TV",
-    url: "https://iptv.almahditv.com/almahdi/playlist.m3u8",
+    url: "https://stream.al-mahdi.tv/hls/1234.m3u8",
     img: "img/channels/al-mahdi.jpg",
     country: "pakistan",
     language: "urdu",
@@ -343,7 +343,7 @@ var channels = [
   {
     id: 23,
     name: "Qaim TV",
-    url: "https://cdn.live247stream.com/qaim/tv/playlist.m3u8",
+    url: "http://cdn37.live247stream.com/qaim/tv/playlist.m3u8",
     img: "img/channels/qaimtv.jpg",
     country: "pakistan",
     language: "urdu",
@@ -371,7 +371,7 @@ var channels = [
   {
     id: 25,
     name: "Ahlebait TV",
-    url: "https://video.ibm.com/embed/23693473?autoplay=true",
+    url: "https://stream.wpbond.com/live/ahlebait1.m3u8",
     img: "img/channels/ahlebait.jpg",
     country: "pakistan",
     language: "urdu",
@@ -427,7 +427,7 @@ var channels = [
   {
     id: 29,
     name: "Imam Hussein TV 3",
-    url: "https://en.imamhusseintv.com/live/ih3.m3u8",
+    url: "https://mn-nl.mncdn.com/ihtv3/ihtv3_sd.smil/playlist.m3u8",
     img: "img/channels/imam-hussein-tv-3.png",
     country: "uk",
     language: "english",
@@ -455,7 +455,7 @@ var channels = [
   {
     id: 31,
     name: "Marjaeyat TV EN",
-    url: "https://liveen.marjaeyattv.com/mtv_en/playlist.m3u8",
+    url: "https://liveen.marjaeyattv.com/mtv_en/playlist03/index.m3u8",
     img: "img/channels/marjaeyat-english.jpg",
     country: "iran",
     language: "english",
@@ -584,7 +584,7 @@ var channels = [
   {
     id: 40,
     name: "Al Anwar TV",
-    url: "https://",
+    url: "https://dacastmmd.mmdlive.lldns.net/dacastmmd/7f3fd725a2684c459974d80790b97ec7/chunklist_b2592000.m3u8",
     img: "img/channels/anwar.jpg",
     country: "iraq",
     language: "arabic",
@@ -653,7 +653,7 @@ var channels = [
   {
     id: 45,
     name: "Al Thaqalayn TV",
-    url: "https://live.thaqalayn.tv/hls/live.m3u8",
+    url: "http://77.36.160.160:1935/videolive/thaghalayn/playlist.m3u8",
     img: "img/channels/thaqalayn-tv.jpg",
     country: "iraq",
     language: "arabic",
@@ -667,7 +667,7 @@ var channels = [
   {
     id: 46,
     name: "Al Maaref TV",
-    url: "https://5e74a9d684b2e.streamlock.net/liveTrans/ngrp:channel23_all/playlist.m3u8",
+    url: "http://38.96.175.40:1935/liveTrans/ngrp:channel23_all/playlist.m3u8",
     img: "img/channels/maaref-tv.jpg",
     country: "iraq",
     language: "arabic",
@@ -681,7 +681,7 @@ var channels = [
   {
     id: 47,
     name: "Al Manar TV",
-    url: "https://stream.fastpublish.net/ALManarLive/index.m3u8",
+    url: "https://manar.live/iptv/playlist.m3u8",
     img: "img/channels/manar-tv.jpg",
     country: "iraq",
     language: "arabic",
@@ -695,7 +695,7 @@ var channels = [
   {
     id: 48,
     name: "Al Iman TV",
-    url: "https://svs.itworkscdn.net/alimanlive/imantv.smil/playlist.m3u8",
+    url: "https://svs.itworkscdn.net/alimanlive/imantv.smil/alimanpublish/imantv/playlist.m3u8",
     img: "img/channels/iman-tv.jpg",
     country: "iraq",
     language: "arabic",
@@ -709,7 +709,7 @@ var channels = [
   {
     id: 49,
     name: "Al Mahdi TV",
-    url: "http://173.212.226.44:8080/live.mp4",
+    url: "https://iptv.almahditv.com/almahditv/playlist_src/index.m3u8",
     img: "img/channels/mahdi-tv.jpg",
     country: "iraq",
     language: "arabic",
@@ -722,7 +722,7 @@ var channels = [
   {
     id: 50,
     name: "Al Wilayah TV",
-    url: "https://livekadeh.com/official/alwilayah.tv",
+    url: "https://af.cdn.livekadeh.com/live/alwilayah_tv-iPad_1080P.m3u8",
     img: "img/channels/wilayah-tv.jpg",
     country: "iraq",
     language: "arabic",
@@ -806,7 +806,7 @@ var channels = [
   {
     id: 56,
     name: "Marjaeyat TV AR",
-    url: "http://livefa.marjaeyattv.com/mtv_ar/playlist.m3u8",
+    url: "https://livear.marjaeyattv.com/mtv_ar/playlist03/index.m3u8",
     img: "img/channels/marjaeyat.jpg",
     country: "iran",
     language: "arabic",
@@ -918,7 +918,7 @@ var channels = [
   {
     id: 64,
     name: "Hodhod FA TV",
-    url: "https://nl.livekadeh.com/hls2/hodhodfarsi.m3u8",
+    url: "https://nl.livekadeh.com/hls2/hodhodfarsi_src.m3u8",
     img: "img/channels/hodhod.jpg",
     country: "iran",
     language: "farsi",
@@ -990,7 +990,7 @@ var channels = [
   {
     id: 69,
     name: "Press TV",
-    url: "https://live1.presstv.ir/live/presstv.m3u8",
+    url: "https://cdnlive.presstv.ir/cdnlive/smil:cdnlive.smil/playlist.m3u8",
     img: "img/channels/press-tv.jpg",
     country: "iran",
     language: "english",
@@ -1781,6 +1781,32 @@ var channels = [
     language: "gujrati",
     category: "general",
     description: "Hussaini Channel Bhavnagar, Gujarat, India",
+    featured: false,
+    popular: false,
+    active: false,
+  },
+{
+    id: 124,
+    name: "Al Wilayah TV Hausa",
+    url: "https://nl.livekadeh.com/hls2/alwilayah.tv.hausa_src.m3u8",
+    img: "https://shialivetv.com/shialive/assets/img/hausa.jpg",
+    country: "iraq",
+    language: "hausa",
+    category: "general",
+    description: "Al Wilayah TV Hausa, Hausa Language, Iraq",
+    featured: false,
+    popular: false,
+    active: false,
+  },
+{
+    id: 125,
+    name: "Beitol Abbas TV",
+    url: "http://live.beitolabbas.tv/live/beitolabbastv.m3u8",
+    img: "https://shialivetv.com/shialive/assets/img/beitolabbas.jpg",
+    country: "iran",
+    language: "farsi",
+    category: "general",
+    description: "Beitol Abbas, Farsi Language, Iran",
     featured: false,
     popular: false,
     active: false,
